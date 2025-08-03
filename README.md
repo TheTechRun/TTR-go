@@ -4,11 +4,19 @@ TTR-go is an intelligent navigation and file management system that provides thr
 
 ## Quick Setup
 
-Add TTR-go to your ~/.bashrc:
+Git clone and download:
 
-```bash
+```
+mkdir -p ~/.scripts/TTR-Scripts/
+cd ~/.scripts/TTR-Scripts/ 
+git clone https://github.com/TheTechRun/ttr-go.git
+```
+
+Add TTR-Go aliases to your ~/.bashrc:
+
+```
 echo "# For ttr-go:" >> ~/.bashrc
-echo "source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
+echo "source $HOME/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -33,7 +41,7 @@ source ~/.bashrc
 
 1. **Ensure files are in place**:
    ```
-   /home/ttr/.scripts/TTR-Scripts/TTR-go/
+   ~/.scripts/TTR-Scripts/TTR-go/
    ├── ttr-go.sh          # Main script
    ├── auto-track.sh      # Auto-tracking functions
    ├── alias.txt          # Aliases and functions
@@ -45,7 +53,7 @@ source ~/.bashrc
 
 2. **Add to your `.bashrc`**:
    ```bash
-   echo "source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
+   echo "source ~/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
    source ~/.bashrc
    ```
 
@@ -184,24 +192,24 @@ environment.systemPackages = [ pkgs.fzf ];
 ### **go-favorites.txt**
 Plain text, one absolute path per line:
 ```
-/home/ttr/nixos-config
-/home/ttr/.bashrc  
-/home/ttr/projects/myapp/src/main.py
+~/nixos-config
+~/.bashrc  
+~/projects/myapp/src/main.py
 ```
 
 ### **go-history.txt**  
 Same format as favorites, automatically managed:
 ```
-/home/ttr/current-work-dir
-/home/ttr/projects/myapp/README.md
-/home/ttr/Downloads
+~/current-work-dir
+~/projects/myapp/README.md
+~/Downloads
 ```
 
 ### **go-jump.txt**
 Same format, cleared on shell exit:
 ```
 /tmp/temp-work
-/home/ttr/current-session-files
+~/current-session-files
 ```
 
 ## Advanced Usage
@@ -229,7 +237,7 @@ Install fzf through your package manager or ensure it's in your PATH.
 ### **Commands not recognized**
 Ensure you've sourced the alias file:
 ```bash
-source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt
+source ~/.scripts/TTR-Scripts/TTR-go/alias.txt
 ```
 
 ### **Auto-tracking not working**
@@ -248,26 +256,3 @@ Jump uses a cleanup trap that runs when the shell exits:
 ```bash
 trap cleanup_jump_file EXIT
 ```
-
-### **Wrapper Script Architecture**  
-Uses `eval` with command output to enable directory changes in current shell:
-```bash
-alias gf='eval "$(/path/to/ttr-go.sh open-favorite-wrapper)"'
-```
-
-### **Duplicate Prevention**
-All systems remove duplicates and move accessed items to the top of their respective lists.
-
-## Version History
-
-- **v1.0**: Initial implementation with favorites
-- **v1.1**: Added history system with auto-tracking
-- **v1.2**: Added jump system with session-only behavior
-- **v1.3**: Simplified by removing redundant manual directory additions
-
----
-
-**Created**: August 2025  
-**Author**: TTR  
-**License**: MIT
-# ttr-go
