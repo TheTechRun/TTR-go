@@ -15,7 +15,7 @@ Add TTR-Go aliases to your ~/.bashrc:
 
 ```bash
 echo "# For ttr-go:" >> ~/.bashrc
-echo "source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
+echo "source ~/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -40,7 +40,7 @@ source ~/.bashrc
 
 1. **Ensure files are in place**:
    ```
-   /home/ttr/.scripts/TTR-Scripts/TTR-go/
+   ~/.scripts/TTR-Scripts/TTR-go/
    ├── ttr-go.sh          # Main script
    ├── auto-track.sh      # Auto-tracking functions
    ├── alias.txt          # Aliases and functions
@@ -52,7 +52,7 @@ source ~/.bashrc
 
 2. **Add to your `.bashrc`**:
    ```bash
-   echo "source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
+   echo "source ~/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
    source ~/.bashrc
    ```
 
@@ -191,24 +191,24 @@ environment.systemPackages = [ pkgs.fzf ];
 ### **go-favorites.txt**
 Plain text, one absolute path per line:
 ```
-/home/ttr/nixos-config
-/home/ttr/.bashrc  
-/home/ttr/projects/myapp/src/main.py
+~/nixos-config
+~/.bashrc  
+~/projects/myapp/src/main.py
 ```
 
 ### **go-history.txt**  
 Same format as favorites, automatically managed:
 ```
-/home/ttr/current-work-dir
-/home/ttr/projects/myapp/README.md
-/home/ttr/Downloads
+~/current-work-dir
+~/projects/myapp/README.md
+~/Downloads
 ```
 
 ### **go-jump.txt**
 Same format, cleared on shell exit:
 ```
 /tmp/temp-work
-/home/ttr/current-session-files
+~/current-session-files
 ```
 
 ## Advanced Usage
@@ -236,7 +236,7 @@ Install fzf through your package manager or ensure it's in your PATH.
 ### **Commands not recognized**
 Ensure you've sourced the alias file:
 ```bash
-source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt
+source ~/.scripts/TTR-Scripts/TTR-go/alias.txt
 ```
 
 ### **Auto-tracking not working**
