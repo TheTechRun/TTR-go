@@ -1,0 +1,23 @@
+# TTR-go aliases
+# Source this file in your .bashrc: source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt
+
+# Source auto-tracking functions
+source /home/ttr/.scripts/TTR-Scripts/TTR-go/auto-track.sh
+
+# Favorites aliases
+alias gF='/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh add-favorite'
+alias gf='eval "$(/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh open-favorite-wrapper)"'
+
+# History aliases
+alias gh='eval "$(/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh open-history)"'
+
+# Jump aliases (session-only)
+alias gj='eval "$(/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh open-jump)"'
+
+# Additional helpful aliases for TTR-go
+alias gfl='/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh list-favorites'
+alias gfr='/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh remove-favorite'
+alias ghl='/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh list-history'
+alias ghc='/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh clear-history'
+alias gjl='/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh list-jump'
+alias gjc='/home/ttr/.scripts/TTR-Scripts/TTR-go/ttr-go.sh clear-jump'

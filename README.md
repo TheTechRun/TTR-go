@@ -4,7 +4,14 @@ TTR-go is an intelligent navigation and file management system that provides thr
 
 ## Quick Setup
 
-Add TTR-go to your ~/.bashrc:
+Git clone and download:
+
+```
+mkdir -p home/ttr/.scripts/TTR-Scripts/
+git clone https://github.com/TheTechRun/ttr-go.git
+```
+
+Add TTR-Go aliases to your ~/.bashrc:
 
 ```bash
 echo "# For ttr-go:" >> ~/.bashrc
