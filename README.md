@@ -7,7 +7,8 @@ TTR-go is an intelligent navigation and file management system that provides thr
 Git clone and download:
 
 ```
-mkdir -p home/ttr/.scripts/TTR-Scripts/
+mkdir -p ~/.scripts/TTR-Scripts/
+cd ~/.scripts/TTR-Scripts/ 
 git clone https://github.com/TheTechRun/ttr-go.git
 ```
 
