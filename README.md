@@ -4,19 +4,11 @@ TTR-go is an intelligent navigation and file management system that provides thr
 
 ## Quick Setup
 
-Git clone and download:
-
-```
-mkdir -p ~/.scripts/TTR-Scripts/
-cd ~/.scripts/TTR-Scripts/ 
-git clone https://github.com/TheTechRun/ttr-go.git
-```
-
-Add TTR-Go aliases to your ~/.bashrc:
+Add TTR-go to your ~/.bashrc:
 
 ```bash
 echo "# For ttr-go:" >> ~/.bashrc
-echo "source ~/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
+echo "source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -41,7 +33,7 @@ source ~/.bashrc
 
 1. **Ensure files are in place**:
    ```
-   ~/.scripts/TTR-Scripts/TTR-go/
+   /home/ttr/.scripts/TTR-Scripts/TTR-go/
    ├── ttr-go.sh          # Main script
    ├── auto-track.sh      # Auto-tracking functions
    ├── alias.txt          # Aliases and functions
@@ -53,7 +45,7 @@ source ~/.bashrc
 
 2. **Add to your `.bashrc`**:
    ```bash
-   echo "source ~/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
+   echo "source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt" >> ~/.bashrc
    source ~/.bashrc
    ```
 
@@ -192,24 +184,24 @@ environment.systemPackages = [ pkgs.fzf ];
 ### **go-favorites.txt**
 Plain text, one absolute path per line:
 ```
-~/nixos-config
-~/.bashrc  
-~/projects/myapp/src/main.py
+/home/ttr/nixos-config
+/home/ttr/.bashrc  
+/home/ttr/projects/myapp/src/main.py
 ```
 
 ### **go-history.txt**  
 Same format as favorites, automatically managed:
 ```
-~/current-work-dir
-~/projects/myapp/README.md
-~/Downloads
+/home/ttr/current-work-dir
+/home/ttr/projects/myapp/README.md
+/home/ttr/Downloads
 ```
 
 ### **go-jump.txt**
 Same format, cleared on shell exit:
 ```
 /tmp/temp-work
-~/current-session-files
+/home/ttr/current-session-files
 ```
 
 ## Advanced Usage
@@ -237,7 +229,7 @@ Install fzf through your package manager or ensure it's in your PATH.
 ### **Commands not recognized**
 Ensure you've sourced the alias file:
 ```bash
-source ~/.scripts/TTR-Scripts/TTR-go/alias.txt
+source /home/ttr/.scripts/TTR-Scripts/TTR-go/alias.txt
 ```
 
 ### **Auto-tracking not working**
